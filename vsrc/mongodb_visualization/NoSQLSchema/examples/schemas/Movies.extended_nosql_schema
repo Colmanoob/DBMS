@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Extended_NoSQL_Schema:NoSQLDataModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Extended_NoSQL_Schema="http://www.modelum.es/extended_nosql_schema" name="Movies">
+  <schemaVersions root="//@entities.3/@entityversions.2" entityVersions="//@entities.1/@entityversions.1 //@entities.5/@entityversions.1 //@entities.1/@entityversions.0" entities="Director"/>
+  <schemaVersions root="//@entities.3/@entityversions.1" entityVersions="//@entities.1/@entityversions.1 //@entities.1/@entityversions.0" entities="Director"/>
+  <schemaVersions root="//@entities.3/@entityversions.4" entityVersions="//@entities.1/@entityversions.1 //@entities.1/@entityversions.0" entities="Director"/>
+  <schemaVersions root="//@entities.1/@entityversions.0"/>
+  <schemaVersions root="//@entities.1/@entityversions.1"/>
+  <schemaVersions root="//@entities.3/@entityversions.0" entityVersions="//@entities.0/@entityversions.1 //@entities.1/@entityversions.1 //@entities.2/@entityversions.0 //@entities.5/@entityversions.0 //@entities.5/@entityversions.1 //@entities.0/@entityversions.0 //@entities.1/@entityversions.0" entities="Director"/>
+  <schemaVersions root="//@entities.4/@entityversions.0"/>
+  <schemaVersions root="//@entities.4/@entityversions.1"/>
+  <schemaVersions root="//@entities.3/@entityversions.3" entityVersions="//@entities.0/@entityversions.1 //@entities.1/@entityversions.1 //@entities.1/@entityversions.0" entities="Director"/>
+  <entities name="Criticism">
+    <entityversions versionId="1">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="color">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="journalist">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Aggregate" name="media" lowerBound="1" upperBound="1" refTo="//@entities.2/@entityversions.0"/>
+    </entityversions>
+    <entityversions versionId="2">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="color">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="journalist">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="media">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+    </entityversions>
+  </entities>
+  <entities name="Director">
+    <entityversions versionId="1">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="actor_movies">
+        <type xsi:type="Extended_NoSQL_Schema:Tuple">
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+        </type>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="directed_movies">
+        <type xsi:type="Extended_NoSQL_Schema:Tuple">
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+        </type>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="name">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+    </entityversions>
+    <entityversions versionId="2">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="directed_movies">
+        <type xsi:type="Extended_NoSQL_Schema:Tuple">
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+        </type>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="name">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+    </entityversions>
+  </entities>
+  <entities name="Media">
+    <entityversions versionId="1">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="name">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="url">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+    </entityversions>
+  </entities>
+  <entities name="Movie">
+    <entityversions versionId="1">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="genre">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="title">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="year">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Aggregate" name="criticisms" upperBound="-1" refTo="//@entities.0/@entityversions.0 //@entities.0/@entityversions.1"/>
+      <properties xsi:type="Extended_NoSQL_Schema:Reference" name="director_id" lowerBound="1" upperBound="1" refTo="Director"/>
+      <properties xsi:type="Extended_NoSQL_Schema:Aggregate" name="prizes" upperBound="-1" refTo="//@entities.5/@entityversions.0 //@entities.5/@entityversions.1"/>
+    </entityversions>
+    <entityversions versionId="2">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="genre">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="title">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="year">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Reference" name="director_id" lowerBound="1" upperBound="1" refTo="Director"/>
+    </entityversions>
+    <entityversions versionId="3">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="genre">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="title">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="year">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Reference" name="director_id" lowerBound="1" upperBound="1" refTo="Director"/>
+      <properties xsi:type="Extended_NoSQL_Schema:Aggregate" name="prizes" upperBound="-1" refTo="//@entities.5/@entityversions.1"/>
+    </entityversions>
+    <entityversions versionId="4">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="genre">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="title">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="year">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Aggregate" name="criticisms" upperBound="-1" refTo="//@entities.0/@entityversions.1"/>
+      <properties xsi:type="Extended_NoSQL_Schema:Reference" name="director_id" lowerBound="1" upperBound="1" refTo="Director"/>
+    </entityversions>
+    <entityversions versionId="5">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="genres">
+        <type xsi:type="Extended_NoSQL_Schema:Tuple">
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+        </type>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="title">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="writers">
+        <type xsi:type="Extended_NoSQL_Schema:Tuple">
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+        </type>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="year">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Reference" name="director_id" lowerBound="1" upperBound="1" refTo="Director"/>
+    </entityversions>
+  </entities>
+  <entities name="Movietheater">
+    <entityversions versionId="1">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="city">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="country">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="name">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+    </entityversions>
+    <entityversions versionId="2">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="_id">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="city">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="country">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="name">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="roomNumbers">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="type">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+    </entityversions>
+  </entities>
+  <entities name="Prize">
+    <entityversions versionId="1">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="event">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="names">
+        <type xsi:type="Extended_NoSQL_Schema:Tuple">
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+          <elements xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+        </type>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="year">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+    </entityversions>
+    <entityversions versionId="2">
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="event">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="name">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="String"/>
+      </properties>
+      <properties xsi:type="Extended_NoSQL_Schema:Attribute" name="year">
+        <type xsi:type="Extended_NoSQL_Schema:PrimitiveType" name="Number"/>
+      </properties>
+    </entityversions>
+  </entities>
+</Extended_NoSQL_Schema:NoSQLDataModel>
