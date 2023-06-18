@@ -86,6 +86,6 @@ To visualize data from MongoDB, follow these steps:
 - Populate the "documents" with objects representing the data for each document. Ensure each document has an "_id" field.
 2. Upload the generated JSON object to the visualization tool.
  
-# Customization
+## Customization
 
 You can customize the visualization appearance and behavior by modifying the code in the project files. The relevant files can be found in the `vsrc` directory.
