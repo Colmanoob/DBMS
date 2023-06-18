@@ -20,11 +20,11 @@
 - The installation is rather simple which may be done using 'pip'.
 	- For e.g., pip install pydrill.# DBMS
   
-## Data Visualization
+# Data Visualization
 
 The visualization behavior depends on the type of data source you are using. The application automatically detects the data type and adjusts the visualization accordingly.
 
-### MySQL Data Visualization
+## MySQL Data Visualization
 
 To visualize data from MySQL, follow these steps:
 
@@ -50,7 +50,7 @@ To visualize data from MySQL, follow these steps:
 - Populate the "rows" with arrays representing the data for each row.
 2. Upload the generated JSON object to the visualization tool.
 
-### MongoDB Data Visualization
+## MongoDB Data Visualization
 
 To visualize data from MongoDB, follow these steps:
 
@@ -86,6 +86,6 @@ To visualize data from MongoDB, follow these steps:
 - Populate the "documents" with objects representing the data for each document. Ensure each document has an "_id" field.
 2. Upload the generated JSON object to the visualization tool.
  
-## Customization
+# Customization
 
 You can customize the visualization appearance and behavior by modifying the code in the project files. The relevant files can be found in the `vsrc` directory.
